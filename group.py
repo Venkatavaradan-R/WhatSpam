@@ -8,11 +8,12 @@ import time
 # Replace below path with the absolute path
 # to chromedriver in your computer
 
-chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('headless')
-driver = webdriver.Chrome('/home/venkat/github/WhatSpam/chromedriver_linux64/chromedriver', chrome_options=chrome_options)
-
+opts = webdriver.ChromeOptions()
+opts.add_argument("--incognito")
+opts.add_argument("--no-sandbox")
+opts.add_argument("--headless")
+# opts.add_argument('window-size=1920x1080');
+driver = webdriver.Chrome('/home/venkat/github/WhatSpam/chromedriver_linux64/chromedriver', options=opts)
 
 driver.get("https://web.whatsapp.com/")
 # # wait = WebDriverWait(driver, 600)
