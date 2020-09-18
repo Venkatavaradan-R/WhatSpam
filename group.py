@@ -9,15 +9,15 @@ import time
 # to chromedriver in your computer
 
 opts = webdriver.ChromeOptions()
-opts.add_argument("--incognito")
+# opts.add_argument("--incognito")
 opts.add_argument("--no-sandbox")
-opts.add_argument("--headless")
+# opts.add_argument("--headless")
 # opts.add_argument('window-size=1920x1080');
 driver = webdriver.Chrome('/home/venkat/github/WhatSpam/chromedriver_linux64/chromedriver', options=opts)
 
 driver.get("https://web.whatsapp.com/")
 # # wait = WebDriverWait(driver, 600)
-# time.sleep(25)
+time.sleep(25)
 
 # # Replace 'Friend's Name' with the name of your friend
 # # or the name of a group
